@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px"
+	 height="80px" viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
+<g id="Solid_Circle">
+	<circle fill="#039AD3" cx="40" cy="29.05" r="16.667"/>
+</g>
+<g id="Plum">
+	<line fill="#FFFFFF" stroke="#0699D2" stroke-width="3" stroke-miterlimit="10" x1="40" y1="53.312" x2="40" y2="48.85"/>
+	<path fill="#0699D2" d="M43.55,67.756C43.55,70.102,41.96,72,40,72l0,0c-1.96,0-3.55-1.898-3.55-4.244v-10.49
+		c0-2.346,1.589-4.244,3.55-4.244l0,0c1.96,0,3.55,1.898,3.55,4.244V67.756z"/>
+</g>
+<g id="Blue_Ring">
+	<circle fill="none" stroke="#039AD3" stroke-width="2.5" stroke-miterlimit="10" cx="40" cy="29.05" r="19.8"/>
+</g>
+</svg>

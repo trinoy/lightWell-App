@@ -1,0 +1,38 @@
+<ion-view view-title="AboutUs">
+  <ion-content>
+    <div class="list card">
+      <div class="item">
+        <h2><b>LightWell</b></h2>
+      </div>
+
+      <div class="item item-body">
+        <p>
+          {{model.aboutUs.content1}}
+        </p>
+        <p>
+          <b>{{model.aboutUs.content2}}</b>
+        </p>
+        <p>
+          {{model.aboutUs.content3}}
+        </p>
+        <p>
+          {{model.aboutUs.content4}}
+        </p>
+        <p>
+          {{model.aboutUs.content5}}
+        </p>
+        <div class="aboutUsMargin">
+          <div class="externalLink1">
+            <img src="img/LinkLogo-BGWT-round_100.png" class="img-responsive img5" ng-click="model.goToBGW()">
+            <h5 class ="externalLink-text">Boston Ground Water Trust</h5>
+          </div>
+          <div class="externalLink2">
+            <img src="img/LinkLogo-LightWell_100.png" class="img-responsive img5" ng-click="model.goToLightWell()">
+            <h6 class ="externalLink-text">LightWell Project</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+

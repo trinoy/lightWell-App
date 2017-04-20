@@ -1,0 +1,40 @@
+<ion-view view-title="Readings">
+  <!--<ion-toggle  ng-model="settings.enableFriends">
+      Enable Friends
+  </ion-toggle>-->
+  <!-- <div class="row" >
+     <div class="col-md-6" id="img1">
+       <img src="img/w1.png" class="img-responsive  " id="img2" >
+     </div>
+   </div>-->
+
+  <!--<ion-slide-box on-slide-changed="slideHasChanged($index)">
+    <ion-slide>
+      <h1>Current Installation</h1>
+      <hr>
+      <img src="img/m1.png" class="img-responsive" id="img2" >
+    </ion-slide>
+    <ion-slide>
+      <h1>Installation 1</h1>
+      <hr>
+      <img src="img/m1.png" class="img-responsive  " id="img2" >
+    </ion-slide>
+    <ion-slide>
+      <h1>Installation 2</h1>
+      <hr>
+      <img src="img/m1.png" class="img-responsive  " id="img2" >
+    </ion-slide>
+  </ion-slide-box>-->
+  <ion-content>
+    <ion-tabs class="tabs-icon-top tabs-color-active-positive custom-tab-top">
+      <ion-tab title="Well List" icon-off="ion-android-globe" icon-on="ion-android-globe" href="#/tab1/wellReadingList">
+        <ion-nav-view name="tab1-wellReadingList"></ion-nav-view>
+      </ion-tab>
+
+      <!-- Account Tab -->
+      <ion-tab title="Contact Us" icon-off="ion-android-call" icon-on="ion-android-call" href="#/tab1/wellReadingMap">
+        <ion-nav-view name="tab1-wellReadingMap"></ion-nav-view>
+      </ion-tab>
+    </ion-tabs>
+  </ion-content>
+</ion-view>

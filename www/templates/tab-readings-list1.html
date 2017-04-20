@@ -1,0 +1,135 @@
+<ion-view title="Wells Map List">
+  <ion-content>
+    <!--<ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="model.onRefresh()">
+    </ion-refresher>
+
+    <ion-list>
+      &lt;!&ndash; <ion-item class="item-icon-right" ng-show="!model.devices.length">No Wells Nearby</ion-item>&ndash;&gt;
+      <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+        <h2>Device 1</h2>
+        <h2>1.12</h2>
+        <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>-->
+
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="model.onRefresh()">
+    </ion-refresher>
+
+    <ion-content delegate-handle="scrollHandle" on-scroll="checkPosition()" sticky>
+      <div class="list" data-tap-disabled="true">
+        <div class="item-container">
+          <div class="item item-divider">
+            <h5>Active Well NearBy</h5>
+          </div>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+        </div>
+        <div class="item-container">
+          <div class="item item-divider">
+            <h2 class="list-header-text">Others</h2>
+          </div>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/readingsList/123">
+            <h2>Device 1</h2>
+            <h2>1.12</h2>
+            <p>1-01-sw-23-ff &nbsp;RSSI: -51</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+        </div>
+      </div>
+    </ion-content>
+
+  </ion-content>
+</ion-view>

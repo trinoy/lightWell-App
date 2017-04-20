@@ -1,0 +1,324 @@
+/* Empty. Add your own CSS if you like */
+
+body {
+  font-family: Helvetica Neue;
+}
+
+.right-content{
+  position: absolute;
+  right: 1px;
+  width: 50px;
+  height: 50px;
+  /* float: right; */
+  /* margin-left: 40%; */
+}
+
+#img2 {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.img3 {
+  max-width: 100% !important;
+  max-height: 84% !important;
+  height: 84%;
+  width: 100%;
+}
+
+.img31 {
+  max-width: 100% !important;
+  max-height: 98% !important;
+  height: 98%;
+  width: 100%;
+}
+
+.img4 {
+  width: 100%;
+}
+
+.img5{
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: 100px;
+}
+
+.image-wrapper{
+  max-width: 100% !important;
+  max-height: 100% !important;
+  /* height: 500px; */
+  width: 100%;
+  height: 86%;
+}
+
+.box {
+  height: 100%;
+}
+
+ion-slides {
+  height: 100vh !important;
+}
+
+.measure-outer {
+  position: relative;
+
+}
+
+.measure-box {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  border: 2px solid #4fa5af;
+  border-radius: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-left: 63px; */
+  top: 2%;
+  left: 11px;
+}
+
+.measure-figure {
+  text-align: -webkit-center;
+  margin-top: 32px;
+  font-size: 20px;
+  color: grey;
+}
+
+.measure-figure1 {
+  float: right;
+  font-size: small;
+  margin-top: 33px;
+  margin-right: 16px;
+}
+
+.upload-button {
+  width: 140px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+
+.scroll {
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-tab-top .tabs {
+  top: 0 !important;
+}
+
+.scroll-content {
+  height: 100%;
+}
+
+.bar.bar-stable {
+  background: #36424c !important
+}
+
+.bar.bar-stable .title {
+  color: #F3F0F0;
+}
+
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
+  color: #3768c5 !important;
+}
+
+.tab-item {
+  max-width: none;
+}
+
+.bar-stable .button.button-clear {
+  color: #F3E9E9;
+}
+
+/* Sticky Header*/
+.item-container {
+  margin: 0;
+  min-height: 1px;
+  overflow: hidden;
+  padding: 36px 0 0 0;
+  position: relative;
+  width: 100%;
+}
+
+.list-sticky .item-divider {
+  bottom: auto;
+  left: 0;
+  line-height: 20px;
+  min-height: 1px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  text-align: center;
+  color: #4e4eb9;
+  font-size: larger;
+}
+
+.item-divider.item-hidden {
+  visibility: hidden;
+}
+
+.item-container.item-animated .item-divider {
+  bottom: 0;
+  top: auto;
+}
+
+.labels {
+  color: red;
+  background-color: white;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  width: 60px;
+  border: 2px solid black;
+  white-space: nowrap;
+}
+
+.list-group {
+  display: -webkit-box;
+}
+
+.list-group-icon-installed {
+  right: initial !important;
+  font-size: 17px !important;
+  color: green;
+  position: relative !important;
+}
+
+.list-group-icon-notInstalled {
+  right: initial !important;
+  font-size: 17px !important;
+  color: red;
+  position: relative !important;
+}
+
+.list-group-range {
+  display: -webkit-box;
+}
+
+.list-group-icon-range {
+  right: initial !important;
+  font-size: 17px !important;
+  color: green;
+  position: relative !important;
+}
+
+.list-group-icon-outRange {
+  right: initial !important;
+  font-size: 17px !important;
+  color: red;
+  position: relative !important;
+}
+
+.margin-hr {
+  margin-bottom: 100px;
+  visibility: hidden;
+}
+
+.list-image {
+  width: 50px;
+  height: 50px;
+  margin-top: 16px;
+}
+
+.list-wellName {
+  margin-top: 12px !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+
+.list-header-right-image{
+  position: absolute;
+  right: 1px;
+  width: 50px;
+  height: 50px;
+}
+
+
+.list-header-text {
+  text-align: center;
+  color: #4e4eb9;
+  font-size: larger;
+  margin: 10px;
+}
+
+.list-header-info {
+  display: flex;
+  height: 50px;
+}
+
+.list-header-count1 {
+  text-align: center;
+  /* margin-top: 7px; */
+  /* background: #0BAB0B; */
+  height: 25px;
+  /* width: 25px; */
+  border-radius: 21px;
+  line-height: 16px;
+  position: absolute;
+  right: 22px;
+}
+
+.list-header-count2 {
+  text-align: center;
+  /* margin-top: 7px; */
+  /* background: #0BAB0B; */
+  height: 25px;
+  /* width: 25px; */
+  border-radius: 21px;
+  line-height: 16px;
+  position: absolute;
+  right: 19px;
+}
+
+.item-complex .item-content, .item-radio .item-content {
+  padding: 10px 10px 15px 5px;
+}
+
+.list-well-desc {
+  white-space: normal !important;
+}
+
+.aboutUsMargin {
+  margin-bottom: 100px;
+}
+
+.externalLink1{
+   float: left;
+   margin-left: 1%;
+   margin-right: 8%;
+   text-align: center;
+ }
+
+.externalLink2{
+  text-align: center;
+}
+
+
+.externalLink-text{
+  margin-top: 2px!important;
+  font-size: 10px !important;
+}
+
+
+.guideMargin {
+  margin-bottom: 100px;
+}
+
+.button-right{
+  display: block !important;
+  width: 100% !important;
+  text-align:right !important;
+}
+
+
+.item-body h1, .item-body h2, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p{
+  color: black;
+  font-size: 16px;
+}

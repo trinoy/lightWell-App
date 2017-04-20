@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="640.08px" height="1135.92px" viewBox="0 0 640.08 1135.92" enable-background="new 0 0 640.08 1135.92"
+	 xml:space="preserve">
+<circle fill="none" stroke="#039AD3" stroke-width="1.8939" stroke-miterlimit="10" cx="92.845" cy="225.129" r="15"/>
+<circle fill="none" stroke="#9CC1CD" stroke-width="1.8939" stroke-miterlimit="10" cx="92.845" cy="316.239" r="15"/>
+<g>
+	
+		<line fill="#FFFFFF" stroke="#9CC1CD" stroke-width="3" stroke-miterlimit="10" x1="92.646" y1="683.016" x2="92.646" y2="678.553"/>
+	<path fill="none" stroke="#9CC2CE" stroke-width="1.8878" stroke-miterlimit="10" d="M95.996,697.165
+		c0,2.214-1.501,4.006-3.351,4.006l0,0c-1.851,0-3.351-1.792-3.351-4.006v-9.902c0-2.214,1.5-4.006,3.351-4.006l0,0
+		c1.85,0,3.351,1.792,3.351,4.006V697.165z"/>
+	<circle fill="none" stroke="#9CC1CD" stroke-width="2.5" stroke-miterlimit="10" cx="92.645" cy="658.753" r="19.8"/>
+</g>
+<g>
+	<circle fill="#039AD3" cx="92.646" cy="411.869" r="16.667"/>
+	
+		<line fill="#FFFFFF" stroke="#0699D2" stroke-width="3" stroke-miterlimit="10" x1="92.646" y1="436.131" x2="92.646" y2="431.668"/>
+	<path fill="#0699D2" d="M96.195,450.575c0,2.346-1.59,4.244-3.55,4.244l0,0c-1.96,0-3.55-1.898-3.55-4.244v-10.49
+		c0-2.346,1.589-4.244,3.55-4.244l0,0c1.96,0,3.55,1.898,3.55,4.244V450.575z"/>
+	<circle fill="none" stroke="#039AD3" stroke-width="2.5" stroke-miterlimit="10" cx="92.645" cy="411.869" r="19.8"/>
+</g>
+<g>
+	
+		<line fill="#FFFFFF" stroke="#0699D2" stroke-width="3" stroke-miterlimit="10" x1="92.846" y1="596.862" x2="92.846" y2="592.399"/>
+	<path fill="#0699D2" d="M96.396,611.306c0,2.346-1.59,4.244-3.55,4.244l0,0c-1.96,0-3.55-1.898-3.55-4.244v-10.49
+		c0-2.346,1.589-4.244,3.55-4.244l0,0c1.96,0,3.55,1.898,3.55,4.244V611.306z"/>
+	<circle fill="none" stroke="#039AD3" stroke-width="2.5" stroke-miterlimit="10" cx="92.845" cy="572.6" r="19.8"/>
+</g>
+<rect x="149.097" y="210.129" fill="none" width="459.913" height="809.678"/>
+<text transform="matrix(1 0 0 1 149.0967 232.3286)"><tspan x="0" y="0" font-family="'NewsGothicMT'" font-size="30">Active Street Cluster</tspan><tspan x="0" y="21.6" font-family="'NewsGothicMT'" font-size="18">Street with interactive well installed</tspan><tspan x="0" y="38.4" font-family="'NewsGothicMT'" font-size="14" letter-spacing="31">	</tspan><tspan x="36" y="38.4" font-family="'NewsGothicMT'" font-size="14">- Zoom to view individual well locations</tspan><tspan x="0" y="91.2" font-family="'NewsGothicMT'" font-size="30">Inactive Street Cluster</tspan><tspan x="0" y="112.8" font-family="'NewsGothicMT'" font-size="18">Streets without interactive well currently installed</tspan><tspan x="0" y="129.6" font-family="'NewsGothicMT'" font-size="14" letter-spacing="31">	</tspan><tspan x="36" y="129.6" font-family="'NewsGothicMT'" font-size="14">- Click on the icon to view date of installation</tspan><tspan x="0" y="146.4" font-family="'NewsGothicMT'" font-size="14"> </tspan><tspan x="0" y="182.4" font-family="'NewsGothicMT'" font-size="30">Active Well Nearby</tspan><tspan x="0" y="204" font-family="'NewsGothicMT'" font-size="18">Well Location within Bluetooth Range</tspan><tspan x="0" y="220.8" font-family="'NewsGothicMT'" font-size="14" letter-spacing="31">	</tspan><tspan x="36" y="220.8" font-family="'NewsGothicMT'" font-size="14">- Only visible when the Bluetooth on your mobile device is </tspan><tspan x="0" y="237.6" font-family="'NewsGothicMT'" font-size="14" letter-spacing="31">		</tspan><tspan x="72" y="237.6" font-family="'NewsGothicMT'" font-size="14">switched on </tspan><tspan x="0" y="254.4" font-family="'NewsGothicMT'" font-size="14" letter-spacing="31">	</tspan><tspan x="36" y="254.4" font-family="'NewsGothicMT'" font-size="14">- Click on the active well to view the well elevation diagram</tspan><tspan x="0" y="271.2" font-family="'NewsGothicMT'" font-size="14" letter-spacing="31">	</tspan><tspan x="36" y="271.2" font-family="'NewsGothicMT'" font-size="14">- Swipe down to update the water level reading</tspan><tspan x="0" y="288" font-family="'NewsGothicMT'" font-size="14" letter-spacing="31">	</tspan><tspan x="36" y="288" font-family="'NewsGothicMT'" font-size="14">- Press the upload button to publish reading to the cloud</tspan><tspan x="0" y="304.8" font-family="'NewsGothicMT'" font-size="14"> </tspan><tspan x="0" y="340.8" font-family="'NewsGothicMT'" font-size="30">Active Well out of Range</tspan><tspan x="0" y="362.4" font-family="'NewsGothicMT'" font-size="18">Well Location currently out of Bluetooth Range</tspan><tspan x="0" y="379.2" font-family="'NewsGothicMT'" font-size="14" letter-spacing="31">	</tspan><tspan x="36" y="379.2" font-family="'NewsGothicMT'" font-size="14">- Move closer to well location until within Bluetooth range</tspan><tspan x="0" y="396" font-family="'NewsGothicMT'" font-size="14"> </tspan><tspan x="0" y="432" font-family="'NewsGothicMT'" font-size="30">Inactive Well Location</tspan><tspan x="0" y="453.6" font-family="'NewsGothicMT'" font-size="18">Well Location currently out of Bluetooth Range</tspan><tspan x="0" y="470.4" font-family="'NewsGothicMT'" font-size="14" letter-spacing="31">	</tspan><tspan x="36" y="470.4" font-family="'NewsGothicMT'" font-size="14">- Click on the icon to view date of installation</tspan></text>
+<rect x="72.845" y="91.654" fill="none" width="536.165" height="119.744"/>
+<text transform="matrix(1 0 0 1 72.8452 105.7139)"><tspan x="0" y="0" font-family="'NewsGothicMT'" font-size="19">Each month ten wells will be active on one Boston street.  </tspan><tspan x="0" y="22.8" font-family="'NewsGothicMT'" font-size="19">You can find the active wells in the list and map views.</tspan></text>
+</svg>

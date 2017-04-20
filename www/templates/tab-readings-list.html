@@ -1,0 +1,95 @@
+<ion-view title="Well List">
+  <ion-content>
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="model.onRefresh()">
+    </ion-refresher>
+
+    <div class="list-header-info">
+      <h5 class="list-header-text">Active Well NearBy</h5>
+      <div class="right-content">
+        <img src="img/mr.svg" class="list-header-right-image"> </img>
+        <h5 class="list-header-count1" ng-show="model.wellSplitInfo.activeNearBy.length ==0 || model.wellSplitInfo.activeNearBy.length ==1">{{model.wellSplitInfo.activeNearBy.length}}</h5>
+        <h5 class="list-header-count2" ng-show="model.wellSplitInfo.activeNearBy.length >1">{{model.wellSplitInfo.activeNearBy.length}}</h5>
+      </div>
+    </div>
+    <ion-list>
+      <ion-item class="item-icon-right" ng-show="!model.wellSplitInfo.activeNearBy.length">No Wells Nearby</ion-item>
+      <ion-item class="item-icon-right" ng-repeat="well in model.wellSplitInfo.activeNearBy" type="item-text-wrap"
+                href="#/tab/readingsList/active/{{well.wellShortName}}-{{well.reading}}">
+        <div class="list-group">
+          <img src="img/ZoneMarkerIconFilled-Active.svg" class="list-image"> </img>
+          <div>
+            <h2 class="list-wellName">{{well.wellShortName}}</h2>
+            <h2>{{well.reading}} feet</h2>
+            <h2 class="list-well-desc">{{well.wellLocDesc}}</h2>
+          </div>
+        </div>
+
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+
+      <div class="list-header-info">
+        <h5 class="list-header-text">Other Active Wells</h5>
+        <img src="img/mnr.svg" class="list-header-right-image"> </img>
+        <h5 class="list-header-count1" ng-show="model.wellSplitInfo.active.length ==0 || model.wellSplitInfo.active.length ==1">{{model.wellSplitInfo.active.length}}</h5>
+        <h5 class="list-header-count2" ng-show="model.wellSplitInfo.active.length >1">{{model.wellSplitInfo.active.length}}</h5>
+      </div>
+      <ion-list>
+        <ion-item class="item-icon-right" ng-show="!model.wellSplitInfo.active.length">No Wells Active</ion-item>
+        <ion-item class="item-icon-right" ng-repeat="well in model.wellSplitInfo.active" type="item-text-wrap"
+                  href="#/tab/readingsList/inActive/{{well.wellShortName}}">
+
+          <div class="list-group">
+            <img src="img/ZoneMarkerIcon-Active.svg" class="list-image"> </img>
+            <div>
+              <h2 class="list-wellName">{{well.wellShortName}}</h2>
+              <!--<h2>0.00 feet</h2>-->
+              <h2 class="list-well-desc">{{well.wellLocDesc}}</h2>
+            </div>
+          </div>
+
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
+
+        <div class="list-header-info">
+          <h5 class="list-header-text">Inactive Wells</h5>
+          <img src="img/mi.svg" class="list-header-right-image"> </img>
+          <h5 class="list-header-count1" ng-show="model.wellSplitInfo.inactive.length ==0 || model.wellSplitInfo.inactive.length ==1">{{model.wellSplitInfo.inactive.length}}</h5>
+          <h5 class="list-header-count2" ng-show="model.wellSplitInfo.inactive.length >1">{{model.wellSplitInfo.inactive.length}}</h5>
+        </div>
+        <ion-list>
+          <ion-item class="item-icon-right" ng-show="!model.wellSplitInfo.inactive.length">No Other Wells</ion-item>
+          <ion-item class="item-icon-right" ng-repeat="well in model.wellSplitInfo.inactive" type="item-text-wrap"
+                    href="">
+
+
+            <div class="list-group">
+              <img src="img/ZoneMarkerIcon-Inactive.svg" class="list-image"> </img>
+              <div>
+                <h2 class="list-wellName">{{well.wellShortName}}</h2>
+                <!--<h2>0.00 feet</h2>-->
+                <h2 class="list-well-desc">{{well.wellLocDesc}}</h2>
+              </div>
+            </div>
+
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+
+        </ion-list>
+        <hr class="margin-hr">
+
+  </ion-content>
+</ion-view>
+
+
+<!-- <div class="list-group">
+     <p>Installation Status:</p>
+     <i ng-if=well.installed class="icon list-group-icon-installed ion-stop"></i>
+     <i ng-if=!well.installed class="icon list-group-icon-notInstalled ion-stop"></i>
+
+
+   <p>Active Status:</p>
+   <i ng-if=well.inRange class="icon list-group-icon-installed ion-stop"></i>
+   <i ng-if=!well.inRange class="icon list-group-icon-notInstalled ion-stop"></i>
+ </div>-->

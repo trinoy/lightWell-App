@@ -102,10 +102,9 @@ angular.module('bgw.controllers', [])
       vm.hide($ionicLoading);
       if (vm.devices_all.length < 1) {
         vm.splitWells(vm.wellZones);
-        // a better solution would be to update a status message rather than an alert
         $ionicPopup.alert({
-          title: "Oops It Seems you are in a no active wells nearby",
-          content: "Please move closer to an active well location and swipe down to refresh the list"
+          title: "Oops, it seems there are no active wells nearby.",
+          content: "Please move closer to an active well location and swipe down to refresh the list."
         }).then(function (result) {
           if (!result) {
             //ionic.Platform.exitApp();
@@ -181,14 +180,14 @@ angular.module('bgw.controllers', [])
         .success(function (well) {
           console.log("upload success" + well);
           $ionicPopup.alert({
-            title: "Reading Uploaded Successfully",
+            title: "Reading Uploaded Successfully.",
             content: "Thank You. Please check other active wells nearby."
           }).then(function (result) {
           });
         })
         .error(function (error) {
           console.log(error);
-          alert("Something went wrong. Please try after sometime");
+          alert("Something went wrong. Please try after sometime.");
         });
     }
   })
@@ -211,7 +210,7 @@ angular.module('bgw.controllers', [])
         })
         .error(function (error) {
           console.log(error);
-          alert("Something went wrong. Please try after sometime");
+          alert("Something went wrong. Please try after sometime.");
         });
     }();
   })
@@ -357,7 +356,7 @@ angular.module('bgw.controllers', [])
         vm.success();
       })
       .catch(function (error) {
-        $scope.plotMap(vm.wellZones);
+        vm.plotMap(vm.wellZones);
         vm.hide($ionicLoading);
       });
 
@@ -366,8 +365,8 @@ angular.module('bgw.controllers', [])
       if (vm.devices_all.length < 1) {
         // a better solution would be to update a status message rather than an alert
         $ionicPopup.alert({
-          title: "Oops It Seems you are in a no active wells nearby",
-          content: "Please move closer to an active well location and refresh the map"
+          title: "Oops, it seems there are no active wells nearby.",
+          content: "Please move closer to an active well location and refresh the map."
         }).then(function (result) {
           if (result) {
             //ionic.Platform.exitApp();
@@ -530,7 +529,7 @@ angular.module('bgw.controllers', [])
             function attachSecretMessageInActive(marker) {
               marker.addListener('click', function () {
                 var infowindow = new google.maps.InfoWindow({
-                  content: '<h5>Well is not active. Please go to an active zone to find a well in range</h5>'
+                  content: '<h5>Well is not active. Please go to an active zone to find a well in range.</h5>'
                 });
                 infowindow.open($scope.map, marker);
 

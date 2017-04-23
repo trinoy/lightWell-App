@@ -40,7 +40,7 @@ angular.module('bgw.bleServices', [])
         setTimeout(function () {
           evothings.ble.stopScan();
           deferred.resolve();
-        }, 3000);
+        }, 4000);
 
         return deferred.promise;
       }

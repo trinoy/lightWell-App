@@ -27,9 +27,9 @@ angular.module('bgw', ['ionic', 'ngCordova', 'bgw.controllers', 'bgw.bleServices
             if (checkNetwork == 0) {
               // $ionicLoading.hide();
               checkNetwork = 1;
-              $ionicPopup.confirm({
+              $ionicPopup.alert({
                 title: 'No Internet Connection',
-                content: 'Please Enable your Wifi or Cellular Data'
+                content: 'Please enable your Wifi or Cellular Data'
               })
                 .then(function (result) {
                   checkNetwork = 0;
@@ -54,9 +54,9 @@ angular.module('bgw', ['ionic', 'ngCordova', 'bgw.controllers', 'bgw.bleServices
           function (message) {
             if (checkBluetooth == 0) {
               checkBluetooth = 1;
-              $ionicPopup.confirm({
+              $ionicPopup.alert({
                 title: 'No Bluetooth Connection',
-                content: 'Sorry,The Bluetooth connection appears to be offline. Please reconnect and try again.'
+                content: 'Sorry, the bluetooth connection appears to be offline. Please enable it and try again.'
               })
                 .then(function (result) {
                   checkBluetooth = 0;

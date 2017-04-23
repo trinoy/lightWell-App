@@ -19,6 +19,7 @@
   <preference name="SplashScreen" value="screen"/>
   <preference name="orientation" value="portrait"/>
   <preference name="android-minSdkVersion" value="21"/>
+  <preference name="android-targetSdkVersion" value="22"/>
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>

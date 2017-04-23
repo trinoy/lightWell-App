@@ -48,7 +48,7 @@ angular.module('bgw.controllers', [])
     };
 
 
-    vm.resetWellClusters1 = function () {
+    vm.resetWellClusters = function () {
       var zonesIndex;
       var wellIndex;
       for (zonesIndex in vm.wellZones) {
@@ -143,11 +143,6 @@ angular.module('bgw.controllers', [])
 
     vm.onRefresh = function () {
       vm.devices = [];
-      vm.resetWellClusters1();
-      //vm.wellSplitInfo = {};
-      //vm.wellSplitInfo.activeNearBy = [];
-      //vm.wellSplitInfo.active = [];
-      //vm.wellSplitInfo.inactive = [];
       if (vm.devices_all != undefined) {
         vm.devices_all.length = 0;
       }
@@ -155,9 +150,16 @@ angular.module('bgw.controllers', [])
         vm.devices_all = bleService.devices;
       }
 
-      bleService.scan().then(
-        vm.success, vm.failure
-      ).finally(
+      wellService.getWellMetaData()
+        .then(function () {
+          vm.wellZones = wellService.devicesMetaData;
+          vm.resetWellClusters();
+          return bleService.scan();
+          //vm.success();
+        })
+        .then(
+          vm.success, vm.failure
+        ).finally(
         function () {
           vm.hide($ionicLoading);
           $scope.$broadcast('scroll.refreshComplete');
@@ -262,16 +264,16 @@ angular.module('bgw.controllers', [])
 
     var vm = this;
     /*Guide.getGuides()
-      .success(function (guides) {
-        console.log("fetch success");
-        //$scope.plotMap(wellZones);
-        vm.guide = guides;
-        //alert("Data Uploaded Successfully");
-      })
-      .error(function (error) {
-        console.log(error);
-        // alert("Something went wrong. Please try after sometime");
-      });*/
+     .success(function (guides) {
+     console.log("fetch success");
+     //$scope.plotMap(wellZones);
+     vm.guide = guides;
+     //alert("Data Uploaded Successfully");
+     })
+     .error(function (error) {
+     console.log(error);
+     // alert("Something went wrong. Please try after sometime");
+     });*/
 
   })
 
@@ -390,7 +392,7 @@ angular.module('bgw.controllers', [])
     vm.onRefresh = function () {
       vm.show($ionicLoading);
       vm.devices = [];
-      vm.resetWellClusters();
+      //vm.resetWellClusters();
       if (vm.devices_all != undefined) {
         vm.devices_all.length = 0;
       }
@@ -398,9 +400,16 @@ angular.module('bgw.controllers', [])
         vm.devices_all = bleService.devices;
       }
 
-      bleService.scan().then(
-        vm.success, vm.failure
-      ).finally(
+      wellService.getWellMetaData()
+        .then(function () {
+          vm.wellZones = wellService.devicesMetaData;
+          vm.resetWellClusters();
+          return bleService.scan();
+          //vm.success();
+        })
+        .then(
+          vm.success, vm.failure
+        ).finally(
         function () {
           vm.hide($ionicLoading);
           $scope.$broadcast('scroll.refreshComplete');

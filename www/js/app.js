@@ -5,9 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('bgw', ['ionic', 'ngCordova', 'bgw.controllers', 'bgw.bleServices', 'leaflet-directive', 'bgw.dataservices', 'bgw.aboutUsServices', 'bgw.guideServices', 'bgw.networkService'])
+angular.module('bgw', ['ionic', 'ngCordova', 'bgw.controllers', 'bgw.bleServices', 'leaflet-directive', 'bgw.dataservices', 'bgw.aboutUsServices', 'bgw.guideServices', 'bgw.networkService', 'bgw.locationService'])
 
-  .run(function ($ionicPlatform, $ionicPopup, networkService, bleService) {
+  .run(function ($ionicPlatform, $ionicPopup, networkService, bleService, locationService) {
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
@@ -64,6 +64,36 @@ angular.module('bgw', ['ionic', 'ngCordova', 'bgw.controllers', 'bgw.bleServices
             }
           });
       });
+
+      if(device.platform == "Android") {
+        var checkLocation = 0;
+        locationService.startClock(function () {
+          cordova.plugins.diagnostic.isLocationAvailable(function (available) {
+            //alert("Location is " + (available ? "available" : "not available"));
+            if (available == false && checkLocation == 0) {
+              checkLocation = 1;
+              $ionicPopup.alert({
+                title: 'Location Service is disabled',
+                content: 'Sorry, the location services appears to be offline. Please enable location Service and try again.'
+              })
+                .then(function (result) {
+                  checkLocation = 0;
+                });
+            }
+          }, function (error) {
+            if (checkLocation == 0) {
+              checkLocation = 1;
+              $ionicPopup.alert({
+                title: 'No Location',
+                content: 'Sorry, the location services appears to be offline. Please enable location Service and try again.'
+              })
+                .then(function (result) {
+                  checkLocation = 0;
+                });
+            }
+          });
+        });
+      }
     })
   })
 

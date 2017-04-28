@@ -52,7 +52,7 @@ body {
   max-height: 100% !important;
   /* height: 500px; */
   width: 100%;
-  height: 86%;
+  height: 85%;
 }
 
 .box {
@@ -68,7 +68,7 @@ ion-slides {
 
 }
 
-.measure-box {
+.platform-android .measure-box {
   height: 100px;
   width: 100px;
   position: absolute;
@@ -81,26 +81,64 @@ ion-slides {
   left: 11px;
 }
 
-.measure-figure {
+.platform-ios .measure-box {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  border: 2px solid #4fa5af;
+  border-radius: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-left: 63px; */
+  top: 2%;
+  left: 11px;
+}
+
+.platform-android .measure-figure {
   text-align: -webkit-center;
   margin-top: 32px;
   font-size: 20px;
   color: grey;
 }
 
-.measure-figure1 {
+.platform-ios .measure-figure {
+  text-align: -webkit-center;
+  margin-top: 22px;
+  font-size: 16px;
+  color: grey;
+}
+
+.platform-android .measure-figure1 {
   float: right;
   font-size: small;
   margin-top: 33px;
   margin-right: 16px;
 }
 
-.upload-button {
+.platform-ios .measure-figure1 {
+  float: right;
+  font-size: small;
+  margin-top: 20px;
+  margin-right: 12px;
+}
+
+.platform-android .upload-button {
   width: 140px;
   height: 50px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 35px;
+}
+
+.platform-ios .upload-button {
+  width: 100px;
+  height: 20px !important;
+  margin-left: auto;
+  min-height: 40px !important;
+  margin-right: auto;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .scroll {

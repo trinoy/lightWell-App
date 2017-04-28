@@ -282,10 +282,15 @@ angular.module('bgw.controllers', [])
     var vm = this;
     vm.wellZones = {};
     vm.devices_all = bleService.devices;
+    vm.clusterInfoWindow;
+    vm.markerInfoWindow;
+    vm.infomsg1 = [];
+
+    vm.lastZoom = 14;
 
     vm.show = function () {
       $ionicLoading.show({
-        template: '<p>Loading the map with Wells Near by</p><ion-spinner></ion-spinner>'
+        template: '<p>Loading the map with wells nearby</p><ion-spinner></ion-spinner>'
       });
     };
 
@@ -461,6 +466,7 @@ angular.module('bgw.controllers', [])
         var gridSizeCluster;
         var maxZoomCluster;
 
+
         for (i = 0; i < wellZones.length; i++) {
 
           markers = [];
@@ -537,10 +543,13 @@ angular.module('bgw.controllers', [])
 
             function attachSecretMessageInActive(marker) {
               marker.addListener('click', function () {
-                var infowindow = new google.maps.InfoWindow({
-                  content: '<h5>Well is not active. Please go to an active zone to find a well in range.</h5>'
+                if (vm.markerInfoWindow != undefined) {
+                  vm.markerInfoWindow.close();
+                }
+                vm.markerInfoWindow = new google.maps.InfoWindow({
+                  content: 'Well is not active. Please go to an active zone to find a well in range.'
                 });
-                infowindow.open($scope.map, marker);
+                vm.markerInfoWindow.open($scope.map, marker);
 
               });
             }
@@ -548,12 +557,12 @@ angular.module('bgw.controllers', [])
           }
           if (wellZones[i].installed == true) {
             wellPathColor = '#186cc5';
-            gridSizeCluster = 1000;
+            gridSizeCluster = 800;
             maxZoomCluster = 15;
           }
           else {
             wellPathColor = '#afafaf';
-            gridSizeCluster = 1000;
+            gridSizeCluster = 800;
             maxZoomCluster = 15;
           }
 
@@ -583,43 +592,49 @@ angular.module('bgw.controllers', [])
             }
           );
 
-          if (wellZones[i].installed == false) {
-            vm.infomsg1 = wellZones[i].activationInfo;
+          vm.infomsg1[i] = wellZones[i].activationInfo;
+          addMarkerClusterListener(markerCluster, i);
+
+          function addMarkerClusterListener(markerCluster, count) {
             markerCluster.addListener('clusterclick', function (cluster) {
               var offset = 0.1 / Math.pow(2, $scope.map.getZoom());
-              var infowindow = new google.maps.InfoWindow({
-                content: '<h5>' + vm.infomsg1 + '</h5>'
-
+              if (vm.clusterInfoWindow != undefined) {
+                vm.clusterInfoWindow.close();
+              }
+              vm.clusterInfoWindow = new google.maps.InfoWindow({
+                content: vm.infomsg1[count]
               });
-              infowindow.setPosition({
+
+              vm.clusterInfoWindow.setOptions({
+                content: vm.infomsg1[count]
+              });
+
+
+              vm.clusterInfoWindow.setPosition({
                 lat: cluster.center_.lat() * (1 + offset),
                 lng: cluster.center_.lng()
               });
-              infowindow.open($scope.map);
+              vm.clusterInfoWindow.open($scope.map);
             });
           }
-          else {
-            vm.infomsg2 = wellZones[i].activationInfo;
-            markerCluster.addListener('clusterclick', function (cluster) {
-              var offset = 0.1 / Math.pow(2, $scope.map.getZoom());
-              var infowindow = new google.maps.InfoWindow({
-                content: '<h5>' + vm.infomsg2 + '</h5>'
-
-              });
-              infowindow.setPosition({
-                lat: cluster.center_.lat() * (1 + offset),
-                lng: cluster.center_.lng()
-              });
-              infowindow.open($scope.map);
-            });
-          }
-
-
           markerClusters.push(markerCluster);
         }
 
         google.maps.event.addListener($scope.map, 'bounds_changed', function () {
-          //alert($scope.map.getZoom());
+
+          if($scope.map.getZoom() >= 16){
+            if (vm.clusterInfoWindow != undefined) {
+              vm.clusterInfoWindow.close();
+            }
+          }
+
+          if($scope.map.getZoom() < 16){
+            if (vm.markerInfoWindow != undefined) {
+              vm.markerInfoWindow.close();
+            }
+          }
+
+          vm.lastZoom = $scope.map.getZoom();
           if ($scope.map.getZoom() >= 16) {
             wellPaths.map(function (wellPath) {
               wellPath.setVisible(true);
@@ -632,8 +647,21 @@ angular.module('bgw.controllers', [])
             wellPaths.map(function (wellPath) {
               wellPath.setVisible(false);
             });
+
           }
         });
+
+        /*    google.maps.event.addListener($scope.map, 'click', function () {
+         if (vm.markerInfoWindow != undefined) {
+         vm.markerInfoWindow.close();
+         }
+
+         if (vm.clusterInfoWindow != undefined) {
+         vm.clusterInfoWindow.close();
+         }
+         });*/
+
+
       });
     }
   });

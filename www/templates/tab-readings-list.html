@@ -6,19 +6,19 @@
     </ion-refresher>
 
     <div class="list-header-info">
-      <h5 class="list-header-text">Active Well NearBy</h5>
-      <div class="right-content">
-        <img src="img/mr.svg" class="list-header-right-image"> </img>
-        <h5 class="list-header-count1" ng-show="model.wellSplitInfo.activeNearBy.length ==0 || model.wellSplitInfo.activeNearBy.length ==1">{{model.wellSplitInfo.activeNearBy.length}}</h5>
-        <h5 class="list-header-count2" ng-show="model.wellSplitInfo.activeNearBy.length >1">{{model.wellSplitInfo.activeNearBy.length}}</h5>
-      </div>
+      <h5 class="list-header-text">Active Wells Nearby</h5>
+     <!-- <div class="right-content">-->
+        <img src="img/ZoneMarkerIconFilled-Active.svg" class="list-header-right-image"> </img>
+        <div class="list-header-count1" ng-show="model.wellSplitInfo.activeNearBy.length ==0 || model.wellSplitInfo.activeNearBy.length ==1">{{model.wellSplitInfo.activeNearBy.length}}</div>
+        <div class="list-header-count2" ng-show="model.wellSplitInfo.activeNearBy.length >1">{{model.wellSplitInfo.activeNearBy.length}}</div>
+     <!-- </div>-->
     </div>
     <ion-list>
       <ion-item class="item-icon-right" ng-show="!model.wellSplitInfo.activeNearBy.length">No Wells Nearby</ion-item>
       <ion-item class="item-icon-right" ng-repeat="well in model.wellSplitInfo.activeNearBy" type="item-text-wrap"
                 href="#/tab/readingsList/active/{{well.wellShortName}}-{{well.reading}}">
         <div class="list-group">
-          <img src="img/ZoneMarkerIconFilled-Active.svg" class="list-image"> </img>
+          <img src="img/mr.svg" class="list-image"> </img>
           <div>
             <h2 class="list-wellName">{{well.wellShortName}}</h2>
             <h2>{{well.reading}} feet</h2>
@@ -31,9 +31,9 @@
 
       <div class="list-header-info">
         <h5 class="list-header-text">Other Active Wells</h5>
-        <img src="img/mnr.svg" class="list-header-right-image"> </img>
-        <h5 class="list-header-count1" ng-show="model.wellSplitInfo.active.length ==0 || model.wellSplitInfo.active.length ==1">{{model.wellSplitInfo.active.length}}</h5>
-        <h5 class="list-header-count2" ng-show="model.wellSplitInfo.active.length >1">{{model.wellSplitInfo.active.length}}</h5>
+        <img src="img/ZoneMarkerIcon-Active.svg" class="list-header-right-image"> </img>
+        <div class="list-header-count1" ng-show="model.wellSplitInfo.active.length ==0 || model.wellSplitInfo.active.length ==1">{{model.wellSplitInfo.active.length}}</div>
+        <div class="list-header-count2" ng-show="model.wellSplitInfo.active.length >1">{{model.wellSplitInfo.active.length}}</div>
       </div>
       <ion-list>
         <ion-item class="item-icon-right" ng-show="!model.wellSplitInfo.active.length">No Wells Active</ion-item>
@@ -41,7 +41,7 @@
                   href="#/tab/readingsList/inActive/{{well.wellShortName}}">
 
           <div class="list-group">
-            <img src="img/ZoneMarkerIcon-Active.svg" class="list-image"> </img>
+            <img src="img/mnr.svg" class="list-image"> </img>
             <div>
               <h2 class="list-wellName">{{well.wellShortName}}</h2>
               <!--<h2>0.00 feet</h2>-->
@@ -54,9 +54,9 @@
 
         <div class="list-header-info">
           <h5 class="list-header-text">Inactive Wells</h5>
-          <img src="img/mi.svg" class="list-header-right-image"> </img>
-          <h5 class="list-header-count1" ng-show="model.wellSplitInfo.inactive.length ==0 || model.wellSplitInfo.inactive.length ==1">{{model.wellSplitInfo.inactive.length}}</h5>
-          <h5 class="list-header-count2" ng-show="model.wellSplitInfo.inactive.length >1">{{model.wellSplitInfo.inactive.length}}</h5>
+          <img src="img/ZoneMarkerIcon-Inactive.svg" class="list-header-right-image"> </img>
+          <div class="list-header-count1" ng-show="model.wellSplitInfo.inactive.length ==0 || model.wellSplitInfo.inactive.length ==1">{{model.wellSplitInfo.inactive.length}}</div>
+          <div class="list-header-count2" ng-show="model.wellSplitInfo.inactive.length >1">{{model.wellSplitInfo.inactive.length}}</div>
         </div>
         <ion-list>
           <ion-item class="item-icon-right" ng-show="!model.wellSplitInfo.inactive.length">No Other Wells</ion-item>
@@ -65,7 +65,7 @@
 
 
             <div class="list-group">
-              <img src="img/ZoneMarkerIcon-Inactive.svg" class="list-image"> </img>
+              <img src="img/mi.svg" class="list-image"> </img>
               <div>
                 <h2 class="list-wellName">{{well.wellShortName}}</h2>
                 <!--<h2>0.00 feet</h2>-->

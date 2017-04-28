@@ -7,8 +7,8 @@ body {
 .right-content{
   position: absolute;
   right: 1px;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   /* float: right; */
   /* margin-left: 40%; */
 }
@@ -224,7 +224,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 .list-image {
   width: 50px;
   height: 50px;
-  margin-top: 16px;
+  margin-top: 5px;
 }
 
 .list-wellName {
@@ -236,8 +236,8 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 .list-header-right-image{
   position: absolute;
   right: 1px;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 
 
@@ -250,31 +250,30 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 
 .list-header-info {
   display: flex;
-  height: 50px;
+  height: 65px;
+  align-content :center;
+  align-items:center;
 }
 
 .list-header-count1 {
   text-align: center;
   /* margin-top: 7px; */
   /* background: #0BAB0B; */
-  height: 25px;
-  /* width: 25px; */
-  border-radius: 21px;
-  line-height: 16px;
+  /* width: 25px;
+   line-height: 25px;*/
+
   position: absolute;
-  right: 22px;
+  right: 27px;
 }
 
 .list-header-count2 {
   text-align: center;
   /* margin-top: 7px; */
   /* background: #0BAB0B; */
-  height: 25px;
-  /* width: 25px; */
-  border-radius: 21px;
-  line-height: 16px;
+  /* width: 25px; line-height: 25px;*/
+
   position: absolute;
-  right: 19px;
+  right: 24px;
 }
 
 .item-complex .item-content, .item-radio .item-content {
@@ -286,7 +285,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 }
 
 .aboutUsMargin {
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 .externalLink1{

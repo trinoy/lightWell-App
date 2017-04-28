@@ -4,6 +4,11 @@ body {
   font-family: Helvetica Neue;
 }
 
+.ptext{
+  text-align: left;
+}
+
+
 .right-content{
   position: absolute;
   right: 1px;

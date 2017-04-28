@@ -20,6 +20,11 @@ angular.module('bgw', ['ionic', 'ngCordova', 'bgw.controllers', 'bgw.bleServices
         StatusBar.styleDefault();
       }
 
+      // hide splash screen
+      setTimeout(function() {
+        navigator.splashscreen.hide();
+      }, 100);
+
       var checkNetwork = 0;
       networkService.startClock(function () {
         if (window.Connection) {
@@ -65,7 +70,7 @@ angular.module('bgw', ['ionic', 'ngCordova', 'bgw.controllers', 'bgw.bleServices
           });
       });
 
-      if(device.platform == "Android") {
+      /*if(device.platform == "Android") {
         var checkLocation = 0;
         locationService.startClock(function () {
           cordova.plugins.diagnostic.isLocationAvailable(function (available) {
@@ -93,7 +98,7 @@ angular.module('bgw', ['ionic', 'ngCordova', 'bgw.controllers', 'bgw.bleServices
             }
           });
         });
-      }
+      }*/
     })
   })
 
